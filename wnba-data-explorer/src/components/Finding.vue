@@ -16,8 +16,11 @@ defineProps({
 </script>
 
 <template>
-    <div className="card bg-white shadow-md p-4">
+    <div className="card bg-card shadow-md p-6">
         <h3 className="text-xl font-bold">{{ title }}</h3>
-        <p className="text-gray-700">{{ description }}</p>
+        <div className="min-h-128">
+            <p className="text-gray-600 mb-4">{{ description }}</p>
+        </div>
+        
     </div>
 </template>

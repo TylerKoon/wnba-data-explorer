@@ -2,6 +2,8 @@
 import Hero from '../components/Hero.vue';
 import LandingPageNavigation from '../components/LandingPageNavigation.vue';
 import Finding from '../components/Finding.vue';
+import DashboardTile from '../components/DashboardTile.vue';
+import { BeakerIcon } from '@heroicons/vue/24/solid'
 
 const dashboards = [
     { title: "Player Trends", description: "Explore player performance trends over the season." },
@@ -20,23 +22,24 @@ const findings = [
 </script>
 
 <template>
-    <div className="flex flex-col">
-        <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center min-h-screen w-full">
             <LandingPageNavigation />
             <Hero />
         </div>
-        <div className="flex flex-col items-center py-6 px-12 min-h-196 bg-gray-200">
-            <h2 className="text-3xl font-bold mb-4">Dashboards</h2>
-            <div className="grid grid-cols-4 grid-flow-row gap-4 max-w-6xl w-full bg-white">
-                <div className="min-w-32 bg-gray-300">test</div>
-                <div className="min-w-32 bg-gray-300">test</div>
-                <div className="min-w-32 bg-gray-300">test</div>
-                <div className="min-w-32 bg-gray-300">test</div>
+        <div className="flex flex-col items-center px-12 min-h-196 max-w-5xl w-full bg-gray-200">
+            <h2 className="text-3xl font-bold my-12">Dashboards</h2>
+            <div className="grid grid-cols-3 grid-flow-row gap-6 w-full bg-white justify-items-center align-items-center">
+                <DashboardTile v-for="dashboard in dashboards" :key="dashboard.title" :title="dashboard.title" :description="dashboard.description">
+                    <template v-slot:figure>
+                        <BeakerIcon className="w-16 h-16 text-gray-500" />
+                    </template>
+                </DashboardTile>
             </div>
         </div>
-        <div className="flex flex-col items-center py-6 px-12 min-h-196 bg-gray-400">
-            <h2 className="text-3xl font-bold mb-4">Findings</h2>
-            <div className="grid gap-12 max-w-6xl w-full bg-white">
+        <div className="flex flex-col items-center py-6 px-12 max-w-5xl w-full bg-gray-200">
+            <h2 className="text-3xl font-bold my-12">Findings</h2>
+            <div className="grid gap-12 w-full bg-white">
                 <Finding v-for="finding in findings" :key="finding.title" :title="finding.title" :description="finding.description" />
             </div>
         </div>
