@@ -1,17 +1,20 @@
 <script setup>
-defineProps({
+import { onMounted, useTemplateRef } from 'vue';
+
+const props = defineProps({
   tableauUrl: {
     type: String,
     required: true
   }
 });
+
+console.log(props.tableauUrl)
 </script>
 
 <template>
-  <!-- TODO: Maybe add a loading spinner and error page -->
-  <div class="flex h-screen">
+  <div id="dashboard" class="flex h-screen">
     <tableau-viz id="tableauViz"       
-      src=":tableauUrl"     
+      :src="props.tableauUrl"     
       toolbar="bottom" hide-tabs>
     </tableau-viz>
   </div>
