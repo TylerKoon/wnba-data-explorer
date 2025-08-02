@@ -9,8 +9,8 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex flex-col h-full min-w-64">
-        <h2 className="text-lg font-bold p-4">WNBA Data Explorer</h2>
+    <div class="flex flex-col h-full min-w-64 bg-base-100">
+        <h2 className="text-lg font-bold p-4 bg-base-200">WNBA Data Explorer</h2>
         <ul className="menu bg-base w-full flex-1">
             <li v-for="category in categories" :key="category.label">
                 <details open  v-if="!!category.dashboards">

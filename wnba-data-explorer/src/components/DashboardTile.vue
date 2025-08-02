@@ -31,14 +31,14 @@ defineProps({
 </script>
 
 <template>
-    <div className="card bg-card shadow-md p-6 max-w-84 min-h-84">
+    <div className="card card-border bg-base-200 shadow-lg p-6 max-w-84 min-h-84">
         <figure className="card-image h-full">
-            <v-icon :name="icon" scale="6" class="text-gray-600" />
+            <v-icon :name="icon" scale="6" />
         </figure>
         <div className="card-body p-1">
             <h3 className="card-title">{{ title }}</h3>
             <div v-for="badge in badges" :key="badge.label" className="tooltip" :data-tip="badge.tooltip">
-              <span className="badge badge-xs badge-warning">{{ badge.label }}</span>
+              <span className="badge badge-xs badge-success">{{ badge.label }}</span>
             </div>
             <p className="card-description">{{ description }}</p>
             <div className="card-actions justify-center pt-4">
