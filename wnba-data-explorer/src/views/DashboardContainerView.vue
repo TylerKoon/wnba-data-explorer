@@ -2,6 +2,10 @@
 import DashboardNavigation from '../components/DashboardNavigation.vue';
 
 const categories = {
+    "home": {
+        label: "Home",
+        route: "/"
+    },
     "shooting-trends": {
         label: "Shooting Trends",
         icon: "chart-bar",
@@ -24,7 +28,7 @@ const categories = {
 <template>
     <div class="flex h-screen">
         <!-- Side bar container -->
-        <div class="w-64 border-r-2">
+        <div class="w-64 border-r-1 border-gray-300">
             <DashboardNavigation :categories="categories" />
         </div>
 

@@ -23,6 +23,15 @@ const router = createRouter({
       ]
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    console.log("Scroll behavior triggered", to, from, savedPosition);
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  },
 })
 
 export default router
