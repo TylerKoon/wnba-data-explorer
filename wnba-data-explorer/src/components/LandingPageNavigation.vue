@@ -10,9 +10,9 @@ import { GiBasketballBall } from "oh-vue-icons/icons"
                 <v-icon name="gi-basketball-ball" scale="2" />  
              </div>
             <ul className="menu menu-horizontal p-0">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#dashboards">Dashboards</a></li>
-                <li><a href="#findings">Findings</a></li>
+                <li><router-link to="/#home">Home</router-link></li>
+                <li><router-link to="/#dashboards">Dashboards</router-link></li>
+                <li><router-link to="/#findings">Findings</router-link></li>
             </ul>
         </div>
     </div>

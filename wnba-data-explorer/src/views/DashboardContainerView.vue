@@ -4,11 +4,12 @@ import DashboardNavigation from '../components/DashboardNavigation.vue';
 const categories = {
     "home": {
         label: "Home",
+        icon: "co-home",
         route: "/"
     },
     "shooting-trends": {
         label: "Shooting Trends",
-        icon: "chart-bar",
+        icon: "gi-basketball-basket",
         dashboards: [
             {
                 label: "Player Trends",
@@ -21,6 +22,22 @@ const categories = {
                 tableau_url: "https://public.tableau.com/views/midterm_presentation/TeamDashboardV2"
             }
         ]
+    },
+    "interesting-plays": {
+        label: "Interesting Plays",
+        icon: "gi-basketball-jersey",
+        dashboards: [
+        ]
+    },
+    "salary-vs-player-skill": {
+        label: "Salary vs. Player Skill",
+        icon: "gi-money-stack",
+        dashboards: []
+    },
+    "schedule-fatigue": {
+        label: "Schedule Fatigue",
+        icon: "bi-calendar3",
+        dashboards: []
     }
 }
 </script>

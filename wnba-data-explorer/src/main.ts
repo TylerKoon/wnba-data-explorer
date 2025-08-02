@@ -4,9 +4,9 @@ import router from './router'
 import './style.css'
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { GiBasketballBasket, GiBasketballJersey, GiBasketballBall, BiCalendar3, GiMoneyStack} from "oh-vue-icons/icons";
+import { GiBasketballBasket, GiBasketballJersey, GiBasketballBall, BiCalendar3, GiMoneyStack, CoHome} from "oh-vue-icons/icons";
 
-addIcons(GiBasketballBasket, GiBasketballJersey, GiBasketballBall, BiCalendar3, GiMoneyStack);
+addIcons(GiBasketballBasket, GiBasketballJersey, GiBasketballBall, BiCalendar3, GiMoneyStack, CoHome);
 
 
 const app = createApp(App)

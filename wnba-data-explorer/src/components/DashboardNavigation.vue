@@ -15,6 +15,7 @@ defineProps({
             <li v-for="category in categories" :key="category.label">
                 <details open  v-if="!!category.dashboards">
                     <summary>
+                        <v-icon v-if="category.icon" :name="category.icon" scale="1.25" />
                         {{ category.label }}
                     </summary>
                     <ul>
@@ -23,7 +24,10 @@ defineProps({
                         </li>
                     </ul>
                 </details>
-                <router-link v-else :to="category.route">{{ category.label }}</router-link>
+                
+                <router-link v-else :to="category.route">
+                    <v-icon v-if="category.icon" :name="category.icon" scale="1.25" />{{ category.label }}
+                </router-link>
             </li>
         </ul>
     </div>

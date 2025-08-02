@@ -2,9 +2,9 @@
     <div className="hero flex-1">
         <div className="hero-content text-center">
             <div className="max-w-md">
-                <h1 className="text-5xl font-bold">WNBA Data Explorer</h1>
-                <p className="py-6">Explore WNBA data through interactive dashboards and findings.</p>
-                <button className="btn btn-primary">Go to Dashboards</button>
+                <h1 className="text-5xl">WNBA Trends Over Time</h1>
+                <p className="py-6">Explore how the game and league have changed over time through interactive dashboards and findings.</p>
+                <router-link className="btn btn-primary" to="/#dashboards">Go to Dashboards</router-link>
             </div>
         </div>
     </div>

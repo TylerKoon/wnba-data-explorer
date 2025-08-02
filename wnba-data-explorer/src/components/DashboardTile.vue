@@ -5,6 +5,14 @@ defineProps({
     type: String,
     required: true
   },
+  badges: {
+    type: Array<{
+      label: string;
+      color: string;
+      tooltip: string;
+    }>,
+    default: () => []
+  },
   icon: {
     type: String,
     required: true
@@ -29,6 +37,9 @@ defineProps({
         </figure>
         <div className="card-body p-1">
             <h3 className="card-title">{{ title }}</h3>
+            <div v-for="badge in badges" :key="badge.label" className="tooltip" :data-tip="badge.tooltip">
+              <span className="badge badge-xs badge-warning">{{ badge.label }}</span>
+            </div>
             <p className="card-description">{{ description }}</p>
             <div className="card-actions justify-center pt-4">
                 <router-link :to="actionRoute" className="btn btn-primary w-full">Go to Dashboard</router-link>
