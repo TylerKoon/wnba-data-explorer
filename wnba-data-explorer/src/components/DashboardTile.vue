@@ -1,14 +1,29 @@
 <script setup lang="ts">
-import { BeakerIcon } from '@heroicons/vue/24/solid'
 
 defineProps({
   title: {
     type: String,
     required: true
   },
+  badges: {
+    type: Array<{
+      label: string;
+      color: string;
+      tooltip: string;
+    }>,
+    default: () => []
+  },
+  icon: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true
+  },
+  actionRoute: {
+    type: String,
+    default: ""
   }
 });
 
@@ -16,14 +31,20 @@ defineProps({
 </script>
 
 <template>
-    <div className="card bg-card shadow-md p-6 max-w-64 min-h-64">
-        <figure className="card-image max-h-32">
-            <!-- <img :src="icon" alt="" className="w-full h-32 object-cover mb-4" /> -->
-            <slot name="figure"></slot>
+    <div className="card bg-card shadow-md p-6 max-w-84 min-h-84">
+        <figure className="card-image h-full">
+            <v-icon :name="icon" scale="6" class="text-gray-600" />
         </figure>
-        <div className="card-header">
+        <div className="card-body p-1">
             <h3 className="card-title">{{ title }}</h3>
+            <div v-for="badge in badges" :key="badge.label" className="tooltip" :data-tip="badge.tooltip">
+              <span className="badge badge-xs badge-warning">{{ badge.label }}</span>
+            </div>
             <p className="card-description">{{ description }}</p>
+            <div className="card-actions justify-center pt-4">
+                <router-link :to="actionRoute" className="btn btn-primary w-full">Go to Dashboard</router-link>
+            </div>
         </div>
+
     </div>
 </template>

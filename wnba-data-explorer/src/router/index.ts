@@ -6,7 +6,7 @@ import DashboardView from '../views/DashboardView.vue'
 const dashboardMap: Record<string, Record<string, string>> = {
   "shooting-trends": {
     "player-trends": "https://public.tableau.com/views/midterm_presentation/PlayerDashboardV2",
-    "team-trends": "https://public.tableau.com/views/midterm_presentation/TeamDashboardV2"
+    "team-trends": "https://public.tableau.com/views/w209_final_project_v1/TeamTableV2"
   }
 }
 
@@ -23,6 +23,15 @@ const router = createRouter({
       ]
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    console.log("Scroll behavior triggered", to, from, savedPosition);
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  },
 })
 
 export default router

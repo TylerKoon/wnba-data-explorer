@@ -10,11 +10,12 @@ defineProps({
 
 <template>
     <div class="flex flex-col h-full min-w-64">
-        <h2 className="text-lg font-bold p-4 bg-red-500">WNBA Data Explorer</h2>
-        <ul className="menu bg-base w-full flex-1 bg-red-300">
+        <h2 className="text-lg font-bold p-4">WNBA Data Explorer</h2>
+        <ul className="menu bg-base w-full flex-1">
             <li v-for="category in categories" :key="category.label">
-                <details open>
+                <details open  v-if="!!category.dashboards">
                     <summary>
+                        <v-icon v-if="category.icon" :name="category.icon" scale="1.25" />
                         {{ category.label }}
                     </summary>
                     <ul>
@@ -23,6 +24,10 @@ defineProps({
                         </li>
                     </ul>
                 </details>
+                
+                <router-link v-else :to="category.route">
+                    <v-icon v-if="category.icon" :name="category.icon" scale="1.25" />{{ category.label }}
+                </router-link>
             </li>
         </ul>
     </div>
