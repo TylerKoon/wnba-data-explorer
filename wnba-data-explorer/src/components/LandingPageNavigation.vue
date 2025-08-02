@@ -1,5 +1,4 @@
-<script setup>
-import { GiBasketballBall } from "oh-vue-icons/icons"
+<script setup lang="ts">
 </script>
 
 <template>

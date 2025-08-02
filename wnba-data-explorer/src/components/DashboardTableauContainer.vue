@@ -1,5 +1,4 @@
-<script setup>
-import { onMounted, useTemplateRef } from 'vue';
+<script setup lang="ts">
 
 const props = defineProps({
   tableauUrl: {

@@ -19,7 +19,7 @@ const router = createRouter({
       component: DashboardContainerView,
       redirect: '/dashboard/test/test',
       children: [
-        { path: ":view", component: DashboardView, props: (route) => ({ tableauUrl: dashboardMap[route.params.category][route.params.view] }) }
+        { path: ":view", component: DashboardView, props: (route: { params: { category: string; view: string } }) => ({ tableauUrl: dashboardMap[route.params.category][route.params.view] }) }
       ]
     }
   ],
