@@ -5,7 +5,7 @@
     <div className="hero flex-1" >
         <div className="hero-overlay flex items-center justify-center bg-base-100">
             <img src="../assets/hero.png" className="w-256 opacity-20" />
-            <div class="absolute inset-0 backdrop-blur-[2px]" 
+            <div class="absolute inset-12 backdrop-blur-[2px]" 
                 style="mask: radial-gradient(circle, black 20%, transparent 80%);">
             </div>
         </div>
