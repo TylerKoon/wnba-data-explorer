@@ -3,6 +3,7 @@ import Hero from '../components/Hero.vue';
 import LandingPageNavigation from '../components/LandingPageNavigation.vue';
 import Finding from '../components/Finding.vue';
 import DashboardTile from '../components/DashboardTile.vue';
+import About from '../components/About.vue';
 
 const dashboards = [
     { title: "Salary vs. Player Skill", badges: [
@@ -34,7 +35,13 @@ const dashboards = [
             <LandingPageNavigation />
             <Hero />
         </div>
-        <div id="dashboards" className="flex flex-col items-center px-12 mb-16 min-h-196 max-w-5xl w-full">
+        <div id="about" className="flex flex-col items-center py-6 px-12 mb-24 mt-24 max-w-5xl w-full">
+            <h2 className="text-3xl font-bold my-12">About</h2>
+            <div className="grid gap-12 w-full">
+                <About />
+            </div>
+        </div>
+        <div id="dashboards" className="flex flex-col items-center px-12 mb-24 min-h-196 max-w-5xl w-full">
             <h2 className="text-3xl font-bold mb-16">Dashboards</h2>
             <div className="grid grid-cols-2 grid-flow-row gap-6 w-full justify-items-center align-items-center">
                 <DashboardTile v-for="dashboard in dashboards" :key="dashboard.title" :title="dashboard.title" :badges="dashboard.badges" :icon="dashboard.icon" :description="dashboard.description" :actionRoute="dashboard.actionRoute" />

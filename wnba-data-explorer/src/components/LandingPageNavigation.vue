@@ -10,8 +10,10 @@
              </div>
             <ul className="menu menu-horizontal p-0">
                 <li><router-link to="/#home">Home</router-link></li>
+                <li><router-link to="/#about">About</router-link></li>
                 <li><router-link to="/#dashboards">Dashboards</router-link></li>
                 <li><router-link to="/#findings">Findings</router-link></li>
+                
             </ul>
         </div>
     </div>
