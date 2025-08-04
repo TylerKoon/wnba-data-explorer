@@ -8,7 +8,6 @@ defineProps({
   badges: {
     type: Array<{
       label: string;
-      color: string;
       tooltip: string;
     }>,
     default: () => []
