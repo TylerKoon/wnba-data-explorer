@@ -3,9 +3,8 @@
     themes: dim --default;
 }
 
-/* @plugin "daisyui/theme" {
-  name: "light";
+@plugin "daisyui/theme" {
+  name: "dim";
   default: true;
-  --color-primary: blue;
-  --color-secondary: teal;
-} */
+  --color-primary: #2171b5;
+}
