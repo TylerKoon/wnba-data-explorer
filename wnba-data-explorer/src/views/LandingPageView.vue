@@ -7,16 +7,16 @@ import About from '../components/About.vue';
 
 const dashboards = [
     { title: "Salary vs. Player Skill", badges: [
-        {label: "Great for New Users", color: "badge-warning", tooltip: "Good for users who are new to Basketball or the WNBA"},
-    ], icon: "gi-money-stack", description: "Examine the relationship between player salaries and their on-court performance metrics.", actionRoute: "/dashboard/shooting-trends/player-trends" },
+        {label: "Great for New Users", tooltip: "Good for users who are new to Basketball or the WNBA"},
+    ], icon: "gi-money-stack", description: "Examine the relationship between player salaries and their on-court performance metrics.", actionRoute: "/dashboard/salary/skill-vs-salary" },
     { title: "Schedule Fatigue", badges: [
-        {label: "Great for New Users", color: "success", tooltip: "Good for users who have some knowledge of Basketball or the WNBA"},
-    ], icon: "bi-calendar3", description: "Analyze the impact of game schedules on player performance and fatigue.", actionRoute: "/dashboard/shooting-trends/player-trends" },
+        {label: "Great for New Users", tooltip: "Good for users who have some knowledge of Basketball or the WNBA"},
+    ], icon: "bi-calendar3", description: "Analyze the impact of game schedules on player performance and fatigue.", actionRoute: "/dashboard/schedule-fatigue/league-trends" },
     { title: "Interesting Plays", badges: [
-        {label: "Great for Experienced Users", color: "warning", tooltip: "Good for users who are new to Basketball or the WNBA"},
-    ], icon: "gi-basketball-jersey", description: "Explore the most interesting plays and players in the WNBA", actionRoute: "/dashboard/shooting-trends/player-trends" },
+        {label: "Great for Experienced Users", tooltip: "Good for users who are new to Basketball or the WNBA"},
+    ], icon: "gi-basketball-jersey", description: "Explore the most interesting plays and players in the WNBA", actionRoute: "/dashboard/interesting-plays/clutch-plays" },
     { title: "Shooting Trends", badges: [
-        {label: "Great for Experienced Users", color: "badge-success", tooltip: "Good for users who have some knowledge of Basketball or the WNBA"},
+        {label: "Great for Experienced Users", tooltip: "Good for users who have some knowledge of Basketball or the WNBA"},
     ], icon: "gi-basketball-basket", description: "Explore changes in shooting behavior across seasons at the player and team level", actionRoute: "/dashboard/shooting-trends/player-trends" },
     ];
 
