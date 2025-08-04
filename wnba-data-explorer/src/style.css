@@ -7,4 +7,7 @@
   name: "dim";
   default: true;
   --color-primary: #2171b5;
+  --color-primary-content: #b2ccd6;
+  --color-success: #254968ff;
+  --color-success-content: #b2ccd6;
 }
